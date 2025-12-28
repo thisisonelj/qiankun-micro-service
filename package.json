@@ -7,12 +7,15 @@
     "install": "npm-run-all --serial install:*",
     "install:main": "cd main && npm i --force",
     "install:clue": "cd clue && npm i --force",
+    "install:order": "cd order && npm i --force",
     "start": "set NODE_OPTIONS=--openssl-legacy-provider && npm-run-all --parallel start:*",
     "start:main": "cd clue && npm run serve",
     "start:clue": "cd main && npm run serve",
+    "start:order": "cd order && npm run serve",
     "build": "set NODE_OPTIONS=--openssl-legacy-provider && npm-run-all build:* && bash ./scripts/bundle.sh",
     "build:main": "cd main && npm run build",
     "build:clue": "cd clue && npm run build",
+    "build:order": "cd order && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

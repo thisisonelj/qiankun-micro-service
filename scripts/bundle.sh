@@ -8,6 +8,9 @@ mkdir ./dist/subapp
 # clue子应用
 cp -r ./clue/dist/ ./dist/subapp/clue/
 
+# order子应用
+cp -r ./order/dist/ ./dist/subapp/order/
+
 # main基座
 cp -r ./main/dist/ ./dist/main/
 

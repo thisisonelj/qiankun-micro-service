@@ -6,8 +6,8 @@
     </div>
     <div class="btns">
       <template v-if="isInQiankun">
-        <button @click="gotoOrder">从当前子应用内跳转到order子应用</button>
-        <button @click="openClue">独立打开clue子应用</button>
+        <button @click="gotoClue">从当前子应用内跳转到clue子应用</button>
+        <button @click="openOrder">独立打开order子应用</button>
       </template>
       <button @click="changeUsername">改变全局的用户名称</button>
     </div>
@@ -30,16 +30,16 @@ export default {
   methods: {
     // setGlobalState 是在 /common/src/store/global-register.js中定义的
     ...mapActions('global', ['setGlobalState']),
-    gotoOrder () {
-      history.pushState(null, 'order', '/order')
+    gotoClue () {
+      history.pushState(null, 'clue', '/clue')
     },
     changeUsername () {
       // 也可通过 store.commit('global/setGlobalState', { user: '李四' }) 进行操作
       this.setGlobalState({
-        user: { name: '线索' + Math.round(Math.random() * 100) }
+        user: { name: '订单' + Math.round(Math.random() * 100) }
       })
     },
-    openClue () {
+    openOrder () {
       if (!this.isInQiankun) {
         alert('当前已经是单独运行的子应用')
         return

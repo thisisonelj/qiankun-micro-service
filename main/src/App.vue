@@ -10,7 +10,7 @@
       </ul>
       <div class="userinfo">主应用的state：{{ JSON.stringify(state) }}</div>
     </div>
-    <div id="subapp-clue"></div>
+    <div id="subapp-app"></div>
   </div>
 </template>
 
@@ -24,7 +24,7 @@ export default {
     return {
       isLoading: true,
       microApps,
-      current: '/clue/'
+      current: '/clue'
     }
   },
   computed: {
